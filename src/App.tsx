@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import IncDecCounter from "./cmps/carosellBtn/IncDecInput";
+import { InputSearch } from "./cmps/InputSearch/InputSearch";
 
-function App() {
+
+
+
+const App = () => {
+
+
+  const incDecProps = {
+    name: 'matan',
+    max: 50000,
+    min: 100,
+    defaultValue: 150,
+    cb: () => console.log('Error'),
+    style: {}
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <InputSearch /> */}
+      <IncDecCounter incDecProps={incDecProps} />
     </div>
   );
 }
